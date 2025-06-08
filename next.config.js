@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 
+const path = require('path');
+const fs = require('fs');
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -57,11 +60,11 @@ const nextConfig = {
       ...config.resolve,
       alias: {
         ...config.resolve.alias,
-        '@/components/ui/button': require.resolve('./src/components/ui/button.tsx'),
-        '@/components/ui/input': require.resolve('./src/components/ui/input.tsx'),
-        '@/components/ui/label': require.resolve('./src/components/ui/label.tsx'),
-        '@/components/ui/textarea': require.resolve('./src/components/ui/textarea.tsx'),
-        '@/components/dashboard/charts/AreaChart': require.resolve('./src/components/dashboard/charts/AreaChart.tsx'),
+        '@/components/ui/button': path.resolve(__dirname, './src/components/ui/Button.tsx'),
+        '@/components/ui/input': path.resolve(__dirname, './src/components/ui/Input.tsx'),
+        '@/components/ui/label': path.resolve(__dirname, './src/components/ui/Label.tsx'),
+        '@/components/ui/textarea': path.resolve(__dirname, './src/components/ui/Textarea.tsx'),
+        '@/components/dashboard/charts/AreaChart': path.resolve(__dirname, './src/components/dashboard/charts/AreaChart.tsx'),
       },
     };
 

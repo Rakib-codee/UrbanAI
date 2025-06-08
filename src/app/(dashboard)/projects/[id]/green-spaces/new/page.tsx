@@ -7,10 +7,10 @@ import Link from 'next/link';
 import { Loader2 } from 'lucide-react';
 
 // Import UI components
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/Label';
+import { Input } from '@/components/ui/Input';
+import { Button } from '@/components/ui/Button';
+import { Textarea } from '@/components/ui/Textarea';
 
 // Define interface for props
 interface NewGreenSpaceProps {
