@@ -1,0 +1,98 @@
+{
+  "dashboard": {
+    "title": "ড্যাশবোর্ড",
+    "welcome": "UrbanAI তে স্বাগতম",
+    "summary": "স্মার্ট সিটি ম্যানেজমেন্ট প্ল্যাটফর্ম"
+  },
+  "nav": {
+    "dashboard": "ড্যাশবোর্ড",
+    "traffic": "ট্রাফিক ব্যবস্থাপনা",
+    "resources": "সম্পদ",
+    "greenSpaces": "সবুজ এলাকা",
+    "simulation": "সিমুলেশন",
+    "reports": "প্রতিবেদন",
+    "settings": "সেটিংস",
+    "help": "সাহায্য ও সমর্থন",
+    "aiAnalysis": "এআই বিশ্লেষণ",
+    "aiAssistant": "এআই সহকারী",
+    "cityMaps": "শহরের মানচিত্র",
+    "environmentalGoals": "পরিবেশগত লক্ষ্য",
+    "successStories": "সাফল্যের গল্প"
+  },
+  "traffic": {
+    "title": "ট্রাফিক ব্যবস্থাপনা",
+    "congestion": "জ্যাম স্তর",
+    "incidents": "ঘটনাসমূহ",
+    "average_speed": "গড় গতি"
+  },
+  "resources": {
+    "title": "সম্পদ ব্যবস্থাপনা",
+    "water": "পানি ব্যবহার",
+    "electricity": "বিদ্যুৎ",
+    "waste": "বর্জ্য ব্যবস্থাপনা"
+  },
+  "greenSpaces": {
+    "title": "সবুজ এলাকা",
+    "coverage": "আওতাধীন এলাকা",
+    "health": "স্বাস্থ্য সূচক",
+    "biodiversity": "জীববৈচিত্র্য"
+  },
+  "reports": {
+    "title": "ব্যবসায়িক গোয়েন্দা প্রতিবেদন",
+    "description": "নগর পরিকল্পনার জন্য ব্যাপক বিশ্লেষণ এবং ভবিষ্যত ভবিষ্যদ্বাণী",
+    "export": "প্রতিবেদন রপ্তানি",
+    "timeframe": {
+      "daily": "দৈনিক",
+      "weekly": "সাপ্তাহিক",
+      "monthly": "মাসিক"
+    },
+    "historical": "ঐতিহাসিক প্রবণতা",
+    "predictions": "এআই-চালিত ভবিষ্যদ্বাণী"
+  },
+  "simulation": {
+    "title": "সিমুলেশন",
+    "run": "সিমুলেশন চালান",
+    "save": "ফলাফল সংরক্ষণ করুন",
+    "scenarios": "দৃশ্যপট",
+    "parameters": "প্যারামিটার"
+  },
+  "common": {
+    "loading": "লোড হচ্ছে...",
+    "save": "সংরক্ষণ করুন",
+    "cancel": "বাতিল করুন",
+    "delete": "মুছুন",
+    "edit": "সম্পাদনা করুন",
+    "view": "দেখুন",
+    "download": "ডাউনলোড করুন",
+    "error": "একটি ত্রুটি ঘটেছে",
+    "success": "অপারেশন সফল হয়েছে",
+    "search": "অনুসন্ধান",
+    "darkMode": "ডার্ক মোড",
+    "lightMode": "লাইট মোড",
+    "allRightsReserved": "সর্বস্বত্ব সংরক্ষিত"
+  },
+  "auth": {
+    "login": "লগইন",
+    "logout": "লগআউট",
+    "register": "নিবন্ধন করুন",
+    "email": "ইমেইল",
+    "password": "পাসওয়ার্ড",
+    "forgotPassword": "পাসওয়ার্ড ভুলে গেছেন?",
+    "profile": "প্রোফাইল"
+  },
+  "environmentalGoals": {
+    "title": "পরিবেশগত লক্ষ্য",
+    "description": "আপনার শহরের জন্য পরিবেশগত লক্ষ্য নির্ধারণ এবং ট্র্যাক করুন",
+    "progress": "লক্ষ্যমাত্রা অর্জনের অগ্রগতি",
+    "onTrack": "সঠিক পথে",
+    "inProgress": "চলমান",
+    "atRisk": "ঝুঁকিতে"
+  },
+  "successStories": {
+    "title": "সাফল্যের গল্প",
+    "description": "আপনার শহরে সফল নগর উন্নয়ন প্রকল্পগুলি প্রদর্শন",
+    "relatedProjects": "সম্পর্কিত প্রকল্প",
+    "keyImpacts": "মূল প্রভাব",
+    "beforeAfter": "আগে এবং পরে"
+  }
+} 

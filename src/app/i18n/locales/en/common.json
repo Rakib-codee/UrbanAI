@@ -1,0 +1,116 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to UrbanAI",
+    "summary": "Smart city management platform"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "traffic": "Traffic Management",
+    "resources": "Resources",
+    "greenSpaces": "Green Spaces",
+    "simulation": "Simulation",
+    "reports": "Reports",
+    "settings": "Settings",
+    "help": "Help & Support",
+    "aiAnalysis": "AI Analysis",
+    "aiAssistant": "AI Assistant",
+    "cityMaps": "City Maps",
+    "environmentalGoals": "Environmental Goals",
+    "successStories": "Success Stories",
+    "dataTransparency": "Data Transparency"
+  },
+  "traffic": {
+    "title": "Traffic Management",
+    "congestion": "Congestion Level",
+    "incidents": "Incidents",
+    "average_speed": "Average Speed"
+  },
+  "resources": {
+    "title": "Resource Management",
+    "water": "Water Usage",
+    "electricity": "Electricity",
+    "waste": "Waste Management"
+  },
+  "greenSpaces": {
+    "title": "Green Spaces",
+    "coverage": "Coverage Area",
+    "health": "Health Index",
+    "biodiversity": "Biodiversity"
+  },
+  "environmentalGoals": {
+    "title": "Environmental Goals",
+    "description": "Set and track environmental targets for your city",
+    "progress": "Progress Toward Goals",
+    "onTrack": "On Track",
+    "inProgress": "In Progress",
+    "atRisk": "At Risk"
+  },
+  "successStories": {
+    "title": "Success Stories",
+    "description": "Showcasing successful urban development projects in your city",
+    "relatedProjects": "Related Projects",
+    "keyImpacts": "Key Impacts",
+    "beforeAfter": "Before & After"
+  },
+  "dataTransparency": {
+    "title": "Data Transparency",
+    "description": "Explore data sources and quality indicators for urban data",
+    "dataSources": "Data Sources",
+    "qualityMetrics": "Quality Metrics",
+    "lastUpdated": "Last Updated",
+    "dataProvider": "Data Provider",
+    "dataQuality": "Data Quality",
+    "completeness": "Completeness",
+    "reliability": "Reliability",
+    "accuracy": "Accuracy",
+    "verified": "Verified",
+    "pending": "Pending Verification",
+    "issue": "Has Issues",
+    "updateFrequency": "Update Frequency",
+    "validationMethods": "Validation Methods"
+  },
+  "reports": {
+    "title": "Business Intelligence Reports",
+    "description": "Comprehensive analytics and future predictions for urban planning",
+    "export": "Export Report",
+    "timeframe": {
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly"
+    },
+    "historical": "Historical Trends",
+    "predictions": "AI-Powered Predictions"
+  },
+  "simulation": {
+    "title": "Simulation",
+    "run": "Run Simulation",
+    "save": "Save Results",
+    "scenarios": "Scenarios",
+    "parameters": "Parameters"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "download": "Download",
+    "error": "An error occurred",
+    "success": "Operation successful",
+    "search": "Search",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "allRightsReserved": "All rights reserved"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "profile": "Profile"
+  }
+} 

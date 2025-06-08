@@ -1,0 +1,98 @@
+{
+  "dashboard": {
+    "title": "仪表板",
+    "welcome": "欢迎使用 UrbanAI",
+    "summary": "智能城市管理平台"
+  },
+  "nav": {
+    "dashboard": "仪表板",
+    "traffic": "交通管理",
+    "resources": "资源",
+    "greenSpaces": "绿色空间",
+    "simulation": "模拟",
+    "reports": "报告",
+    "settings": "设置",
+    "help": "帮助与支持",
+    "aiAnalysis": "人工智能分析",
+    "aiAssistant": "人工智能助手",
+    "cityMaps": "城市地图",
+    "environmentalGoals": "环境目标",
+    "successStories": "成功案例"
+  },
+  "traffic": {
+    "title": "交通管理",
+    "congestion": "拥堵程度",
+    "incidents": "事件",
+    "average_speed": "平均速度"
+  },
+  "resources": {
+    "title": "资源管理",
+    "water": "用水量",
+    "electricity": "电力",
+    "waste": "废物管理"
+  },
+  "greenSpaces": {
+    "title": "绿色空间",
+    "coverage": "覆盖面积",
+    "health": "健康指数",
+    "biodiversity": "生物多样性"
+  },
+  "environmentalGoals": {
+    "title": "环境目标",
+    "description": "为您的城市设定和跟踪环境目标",
+    "progress": "目标进展",
+    "onTrack": "按计划进行",
+    "inProgress": "进行中",
+    "atRisk": "存在风险"
+  },
+  "successStories": {
+    "title": "成功案例",
+    "description": "展示您城市的成功城市发展项目",
+    "relatedProjects": "相关项目",
+    "keyImpacts": "主要影响",
+    "beforeAfter": "前后对比"
+  },
+  "reports": {
+    "title": "商业智能报告",
+    "description": "城市规划的综合分析和未来预测",
+    "export": "导出报告",
+    "timeframe": {
+      "daily": "每日",
+      "weekly": "每周",
+      "monthly": "每月"
+    },
+    "historical": "历史趋势",
+    "predictions": "AI 驱动的预测"
+  },
+  "simulation": {
+    "title": "模拟",
+    "run": "运行模拟",
+    "save": "保存结果",
+    "scenarios": "场景",
+    "parameters": "参数"
+  },
+  "common": {
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "view": "查看",
+    "download": "下载",
+    "error": "发生错误",
+    "success": "操作成功",
+    "search": "搜索",
+    "darkMode": "暗黑模式",
+    "lightMode": "明亮模式",
+    "allRightsReserved": "版权所有"
+  },
+  "auth": {
+    "login": "登录",
+    "logout": "退出",
+    "register": "注册",
+    "email": "电子邮件",
+    "password": "密码",
+    "forgotPassword": "忘记密码？",
+    "profile": "个人资料"
+  }
+} 

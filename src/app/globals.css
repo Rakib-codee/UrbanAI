@@ -1,0 +1,516 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles below */
+
+/* Remove these problematic global styles that are causing rendering issues */
+/* * {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  border: none !important;
+} */
+
+:root {
+  --background: #4f46e5;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #4f46e5;
+    --foreground: #ededed;
+  }
+}
+
+/* Replace with less aggressive styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Dashboard specific styles */
+.dashboard-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Fix scrolling after login */
+body.dashboard-page {
+  scroll-behavior: auto;
+  scroll-padding-top: 0;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.dashboard-page #__next,
+body.dashboard-page main,
+body.dashboard-page > div {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.scroll-top {
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+body.scroll-top::before {
+  content: none !important;
+}
+
+/* Landing page styles - don't affect dashboard */
+.landing-page {
+  background: #4f46e5;
+  background: linear-gradient(
+    270deg,
+    #4f46e5,
+    #7c3aed,
+    #2563eb,
+    #4f46e5
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Fix for text elements to prevent overlapping */
+.landing-page h1, 
+.landing-page h2, 
+.landing-page h3, 
+.landing-page h4, 
+.landing-page h5, 
+.landing-page h6, 
+.landing-page p, 
+.landing-page span, 
+.landing-page a, 
+.landing-page button {
+  margin: 0.25rem 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Fix for links in navbar and buttons */
+.landing-page nav a, 
+.landing-page button, 
+.landing-page .link {
+  display: inline-block !important;
+  margin: 0.25rem !important;
+  padding: 0.5rem !important;
+}
+
+/* Section container for landing page */
+.section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 100vh; /* Ensure each section takes at least full viewport height */
+}
+
+/* Features section styling */
+#features {
+  padding: 10rem 0 !important;
+  position: relative;
+  z-index: 10;
+}
+
+#features .container {
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
+
+#features .grid {
+  display: grid;
+  grid-gap: 2rem !important;
+}
+
+#features h2 {
+  margin-bottom: 3rem !important;
+}
+
+/* Card layout fixes */
+.glass-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem !important;
+}
+
+.glass-card h3 {
+  font-size: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.glass-card p {
+  margin-top: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Mobile responsive section fixes */
+@media (max-width: 768px) {
+  .section-container {
+    min-height: auto;
+    padding: 4rem 0 !important;
+  }
+  
+  #features {
+    padding: 6rem 0 !important;
+  }
+  
+  .glass-card {
+    padding: 1.5rem !important;
+  }
+}
+
+/* City silhouette styling */
+.city-silhouette {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200'%3E%3Cpath fill='%23ffffff' d='M0,200 L0,160 L30,160 L30,150 L45,150 L45,140 L55,140 L55,130 L65,130 L65,160 L80,160 L80,140 L95,140 L95,150 L110,150 L110,130 L125,130 L125,160 L140,160 L140,120 L150,120 L150,100 L160,100 L160,140 L175,140 L175,120 L190,120 L190,150 L200,150 L200,130 L215,130 L215,110 L230,110 L230,140 L240,140 L240,130 L255,130 L255,90 L270,90 L270,120 L285,120 L285,100 L300,100 L300,140 L315,140 L315,130 L330,130 L330,110 L340,110 L340,90 L350,90 L350,70 L365,70 L365,120 L380,120 L380,150 L395,150 L395,130 L410,130 L410,140 L425,140 L425,130 L440,130 L440,150 L455,150 L455,110 L470,110 L470,130 L485,130 L485,90 L500,90 L500,70 L515,70 L515,50 L530,50 L530,80 L545,80 L545,100 L560,100 L560,120 L575,120 L575,150 L590,150 L590,140 L605,140 L605,130 L620,130 L620,110 L635,110 L635,140 L650,140 L650,160 L665,160 L665,120 L680,120 L680,140 L695,140 L695,110 L710,110 L710,150 L725,150 L725,140 L740,140 L740,130 L755,130 L755,110 L770,110 L770,80 L785,80 L785,90 L800,90 L800,70 L815,70 L815,60 L830,60 L830,90 L845,90 L845,110 L860,110 L860,140 L875,140 L875,120 L890,120 L890,140 L905,140 L905,150 L920,150 L920,140 L935,140 L935,130 L950,130 L950,150 L965,150 L965,160 L980,160 L980,170 L1000,170 L1000,200 Z'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 1000px 200px;
+}
+
+/* Grid pattern styling */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600;
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl;
+  }
+
+  .glass-button {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .animated-gradient {
+    background: linear-gradient(
+      270deg,
+      #4f46e5,
+      #7c3aed,
+      #2563eb,
+      #4f46e5
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes slide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* New animations for data points */
+.data-point {
+  animation: pulse 4s infinite;
+}
+
+.data-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: slide 3s infinite;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+  /* Mobile responsiveness variables */
+  --vh: 1vh;
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  min-height: 100vh;
+  /* Use the custom vh variable for better mobile experience */
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 0;
+  margin: 0;
+  margin-top: 0 !important; 
+  border-top: 0;
+  outline: none;
+  background: transparent;
+}
+
+/* Mobile responsive utility classes */
+@media (max-width: 640px) {
+  .mobile-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-full-width {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+  
+  .mobile-stack > * + * {
+    margin-top: 1rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .header-compact {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .content-scroll {
+    max-height: calc(var(--vh, 1vh) * 100 - 4rem);
+    overflow-y: auto;
+  }
+}
+
+/* Touch interface optimizations */
+.touch-device .touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.touch-device button:not(.touch-exempt),
+.touch-device a:not(.touch-exempt),
+.touch-device [role="button"]:not(.touch-exempt),
+.touch-device input[type="submit"]:not(.touch-exempt),
+.touch-device input[type="button"]:not(.touch-exempt) {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem;
+}
+
+.touch-device .touch-spacing > * + * {
+  margin-top: 1rem;
+}
+
+/* Dashboard animation fixes */
+.dashboard-loaded [style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Prevent duplicate rendering - strong rule */
+.dashboard-container ~ .dashboard-container,
+.flex.flex-col.min-h-screen.bg-gray-50 ~ .flex.flex-col.min-h-screen.bg-gray-50,
+.flex.h-screen.bg-gray-100 ~ .flex.h-screen.bg-gray-100 {
+  display: none !important;
+}
+
+/* Make sure only the first dashboard renders */
+.dashboard-container:not(:first-of-type),
+.flex.flex-col.min-h-screen.bg-gray-50:not(:first-of-type),
+.flex.h-screen.bg-gray-100:not(:first-of-type) {
+  display: none !important;
+}
+
+/* Fix styling on first rendered dashboard */
+.flex.flex-col.min-h-screen.bg-gray-50:first-of-type,
+.flex.h-screen.bg-gray-100:first-of-type {
+  display: flex !important;
+  z-index: 10;
+  position: relative;
+}
+
+/* Fix for Next.js rendering multiple instances */
+#__next > div > .flex.flex-col.min-h-screen.bg-gray-50:not(:first-child),
+#__next > div > .flex.h-screen.bg-gray-100:not(:first-child),
+#__next > .flex.flex-col.min-h-screen.bg-gray-50:not(:first-child),
+#__next > .flex.h-screen.bg-gray-100:not(:first-child) {
+  display: none !important;
+}
+
+/* Force visible content */
+.recharts-responsive-container {
+  opacity: 1 !important;
+}
