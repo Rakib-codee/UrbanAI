@@ -2,5 +2,11 @@
   "version": 2,
   "buildCommand": "chmod +x vercel-install-command.sh && ./vercel-install-command.sh && npm run build",
   "outputDirectory": ".next",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "ignoreCommand": "echo \"Skipping ignoreCommand\"",
+  "build": {
+    "env": {
+      "VERCEL_FILESYSTEM_CASE_SENSITIVE": "0"
+    }
+  }
 } 

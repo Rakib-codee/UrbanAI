@@ -52,6 +52,19 @@ const nextConfig = {
       ];
     }
 
+    // Enable case-insensitive module resolution
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve.alias,
+        '@/components/ui/button': require.resolve('./src/components/ui/button.tsx'),
+        '@/components/ui/input': require.resolve('./src/components/ui/input.tsx'),
+        '@/components/ui/label': require.resolve('./src/components/ui/label.tsx'),
+        '@/components/ui/textarea': require.resolve('./src/components/ui/textarea.tsx'),
+        '@/components/dashboard/charts/AreaChart': require.resolve('./src/components/dashboard/charts/AreaChart.tsx'),
+      },
+    };
+
     // Disable parsing of problematic native modules
     config.module = {
       ...config.module,
