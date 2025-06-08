@@ -6,7 +6,11 @@
   "ignoreCommand": "echo \"Skipping ignoreCommand\"",
   "build": {
     "env": {
-      "VERCEL_FILESYSTEM_CASE_SENSITIVE": "0"
+      "VERCEL_FILESYSTEM_CASE_SENSITIVE": "0",
+      "NODE_OPTIONS": "--max-old-space-size=4096"
     }
+  },
+  "env": {
+    "NEXT_PUBLIC_VERCEL_ENV": "production"
   }
 } 

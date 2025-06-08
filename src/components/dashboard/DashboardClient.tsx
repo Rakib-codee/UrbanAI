@@ -29,7 +29,7 @@ import {
 import { useTheme } from '@/lib/ThemeContext';
 import { useTranslation } from '@/app/i18n/hooks';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { auth } from '@/lib/simple-auth';
 import { clearCache } from '@/services/apiService';
 

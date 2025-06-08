@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import ChatInterface from './ChatInterface';
 import { ArrowUpCircle, Bot, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/Input';
+import { Button } from '@/components/ui/Button';
 
 export default function AIAssistantWidget() {
   const [isExpanded, setIsExpanded] = useState(false);

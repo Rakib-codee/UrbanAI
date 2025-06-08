@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Bell, BellPlus, Check, X, Shield, Leaf, Car, Building, Cloud, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { useTranslation } from '@/app/i18n/hooks';
 
 type Notification = {

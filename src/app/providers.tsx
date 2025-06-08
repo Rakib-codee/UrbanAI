@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { initI18n } from './i18n/hooks';
 import i18n from './i18n/i18n';
 import { SessionProvider } from '@/components/SessionProvider';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 // Utility functions for mobile responsiveness
 const useResponsiveLayout = () => {
@@ -81,17 +82,19 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <SessionProvider>
-      <ThemeProvider>
-        <RealTimeDataProvider>
-          <NotificationProvider>
-            <UserRoleProvider>
-              {children}
-              <Toaster position="top-right" />
-            </UserRoleProvider>
-          </NotificationProvider>
-        </RealTimeDataProvider>
-      </ThemeProvider>
-    </SessionProvider>
+    <ErrorBoundary>
+      <SessionProvider>
+        <ThemeProvider>
+          <RealTimeDataProvider>
+            <NotificationProvider>
+              <UserRoleProvider>
+                {children}
+                <Toaster position="top-right" />
+              </UserRoleProvider>
+            </NotificationProvider>
+          </RealTimeDataProvider>
+        </ThemeProvider>
+      </SessionProvider>
+    </ErrorBoundary>
   );
 } 

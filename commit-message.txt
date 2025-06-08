@@ -1,0 +1,9 @@
+fix: resolve React dependency conflicts for Vercel deployment
+
+- Downgraded @react-three/drei from 10.0.4 to 9.88.17 (React 18 compatible)
+- Downgraded @react-three/fiber from 9.1.0 to 8.15.11 (React 18 compatible)
+- Downgraded react-leaflet from 5.0.0 to 4.2.1 (React 18 compatible)
+- Downgraded three.js from 0.174.0 to 0.159.0 (compatible with React 18)
+- Updated @types packages to match React 18
+- Added resolutions field to enforce React 18 usage
+- Created custom Vercel installation script using --force flag 

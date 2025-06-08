@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import { DashboardPager } from "@/components/dashboard/DashboardPager";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Download, Filter, RefreshCw, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
