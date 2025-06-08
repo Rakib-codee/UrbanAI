@@ -1,110 +1,173 @@
-# Urban AI Project
+# UrbanAI - Smart City Management Platform
 
-A comprehensive urban planning and visualization dashboard with AI-powered analytics for smart cities.
+![UrbanAI Logo](https://img.shields.io/badge/UrbanAI-Smart%20City%20Platform-0077B6)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-green.svg)
+![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black)
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB)
 
-## Features
+## 🌆 Overview
 
-- Interactive dashboard for urban data visualization
-- AI-powered analytics and predictions
-- Traffic analysis and simulation
-- Resource management tools
-- Weather insights and forecasting
-- Environmental impact assessment
+UrbanAI is a comprehensive urban planning and visualization platform that leverages artificial intelligence to provide data-driven insights for smart city management. The platform offers real-time analytics, predictive modeling, and interactive visualizations to help urban planners, city administrators, and stakeholders make informed decisions.
 
-## Deployment Guide
+## ✨ Key Features
 
-### Prerequisites
+- **Interactive Dashboard** - Visualize urban data with dynamic charts and maps
+- **AI-Powered Analytics** - Leverage machine learning for predictive urban planning
+- **Traffic Management** - Real-time traffic analysis and simulation
+- **Resource Optimization** - Monitor and optimize city resource allocation
+- **Environmental Impact** - Track green spaces and environmental metrics
+- **Weather Integration** - Access weather insights and forecasting
+- **3D Visualization** - Interactive 3D models for urban planning scenarios
+- **Multi-language Support** - Internationalization with i18next
+- **Authentication System** - Secure user authentication and role-based access
+- **Data Export** - Export reports and data in various formats
+
+## 🛠️ Technology Stack
+
+- **Frontend**: React 18, Next.js 15
+- **Styling**: Tailwind CSS, Tremor, Radix UI
+- **Maps & Visualization**: Leaflet, React Three Fiber, Recharts, Chart.js
+- **AI Integration**: OpenAI
+- **Authentication**: JWT, bcrypt
+- **Database**: Prisma ORM with SQLite (configurable for MySQL)
+- **Internationalization**: i18next
+- **Deployment**: Docker, Nginx
+
+## 📋 Prerequisites
 
 - Node.js 18.x or higher
-- Git
 - npm or yarn
+- Git
+
+## 🚀 Getting Started
 
 ### Local Development
 
-1. Clone the repository
-```bash
-git clone <your-repo-url>
-cd urbanai-project
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/urbanai-project.git
+   cd urbanai-project
+   ```
 
-2. Install dependencies
-```bash
-npm install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-3. Start the development server
-```bash
-npm run dev
-```
+3. **Set up environment variables**
+   Create a `.env.local` file with the following:
+   ```
+   NEXT_PUBLIC_API_URL=http://localhost:3000/api
+   NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token
+   NEXT_PUBLIC_WEATHER_API_KEY=your_weather_api_key
+   JWT_SECRET=your_jwt_secret
+   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. **Set up the database**
+   ```bash
+   npm run prisma:generate
+   npm run prisma:migrate
+   npm run prisma:seed
+   ```
 
-### Production Deployment
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-#### Option 1: Using the deployment script
+6. **Open [http://localhost:3000](http://localhost:3000) in your browser**
 
-We've included a deployment script that handles versioning and deployment:
+### Docker Deployment
 
+1. **Build and run with Docker Compose**
+   ```bash
+   docker-compose up -d
+   ```
+
+2. **Access the application at [http://localhost:3000](http://localhost:3000)**
+
+## 🔄 CI/CD and Deployment
+
+### Automated Deployment
+
+Use the included deployment script:
 ```bash
 ./deploy.sh
 ```
 
-This script will:
-- Pull the latest changes from your repository
-- Install dependencies
-- Build the application
-- Create a version tag using the current date and time
-- Push changes and tags to your repository
-- Deploy to Vercel (can be modified for other platforms)
+This script:
+- Pulls latest changes
+- Installs dependencies
+- Builds the application
+- Creates a version tag (format: `vYYYY.MM.DD-HHMM`)
+- Deploys the application
 
-#### Option 2: Manual deployment
+### Manual Deployment
 
-1. Build the application
-```bash
-npm run build
-```
+1. **Build the application**
+   ```bash
+   npm run build
+   ```
 
-2. Deploy the output
-```bash
-# For Vercel
-npx vercel --prod
+2. **Start the production server**
+   ```bash
+   npm run start
+   ```
 
-# For Netlify
-npx netlify deploy --prod
-
-# For serving locally
-npm run start
-```
-
-### Version Control
-
-We use Git for version control with the following conventions:
-
-- **Tags**: Each deployment creates a tag with format `vYYYY.MM.DD-HHMM`
-- **Commits**: Use descriptive commit messages following [Conventional Commits](https://www.conventionalcommits.org/)
-- **Branches**: 
-  - `main` - Production-ready code
-  - `develop` - Integration branch for features
-  - `feature/name` - For new features
-  - `fix/name` - For bug fixes
-
-## Environment Variables
-
-Create a `.env.local` file for development:
+## 📊 Project Structure
 
 ```
-NEXT_PUBLIC_API_URL=your_api_url
-NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token
-NEXT_PUBLIC_WEATHER_API_KEY=your_weather_api_key
+urbanai-project/
+├── src/                      # Source code
+│   ├── app/                  # Next.js app directory
+│   │   ├── (auth)/           # Authentication routes
+│   │   ├── (dashboard)/      # Dashboard layout routes
+│   │   ├── dashboard/        # Dashboard main components
+│   │   └── api/              # API routes
+│   ├── components/           # Reusable components
+│   ├── contexts/             # React contexts
+│   ├── db/                   # Database utilities
+│   ├── lib/                  # Library code
+│   ├── services/             # Service integrations
+│   ├── types/                # TypeScript types
+│   └── utils/                # Utility functions
+├── prisma/                   # Prisma schema and migrations
+├── public/                   # Static assets
+├── nginx/                    # Nginx configuration
+├── docker-compose.yml        # Docker Compose configuration
+└── Dockerfile                # Docker configuration
 ```
 
-## Contributing
+## 🔐 Authentication and Authorization
 
-1. Create a feature branch from develop
-2. Make your changes
-3. Submit a pull request to develop
-4. After review, changes will be merged to main for deployment
+UrbanAI implements a secure authentication system with JWT tokens and role-based access control:
 
-## License
+- **User Roles**: Admin, Planner, Analyst, Viewer
+- **Session Management**: Secure JWT-based sessions
+- **Password Security**: bcrypt hashing for secure password storage
+
+## 🌐 API Documentation
+
+The platform provides a comprehensive API for integration with other systems:
+
+- **Authentication API**: `/api/auth/*`
+- **Projects API**: `/api/projects/*`
+- **Analytics API**: `/api/analytics/*`
+- **Data API**: `/api/data/*`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📧 Contact
+
+For questions or support, please contact [your-email@example.com](mailto:your-email@example.com)
