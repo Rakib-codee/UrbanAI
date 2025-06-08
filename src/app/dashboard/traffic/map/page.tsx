@@ -3,10 +3,16 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs';
-import TrafficMap from '@/components/map/TrafficMap';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+// Dynamically import TrafficMap with SSR disabled to avoid window reference errors
+const TrafficMap = dynamic(
+  () => import('@/components/map/TrafficMap'),
+  { ssr: false }
+);
 
 export default function TrafficMapPage() {
   const [activeTab, setActiveTab] = useState('map');

@@ -7,7 +7,8 @@ import React from 'react';
 import { FallbackComponent } from './FallbackComponent';
 
 // Import all UI components with try/catch for reliability
-let Button, Input, Label, Textarea, Card, Tabs, Switch, Slider, Avatar;
+let Button, Input, Label, Textarea, Card;
+let CardContent, CardDescription, CardFooter, CardHeader, CardTitle;
 
 // Button
 try {
@@ -45,16 +46,32 @@ try {
 try {
   const CardModule = require('./Card');
   Card = CardModule.Card;
-  export const { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } = CardModule;
+  CardContent = CardModule.CardContent;
+  CardDescription = CardModule.CardDescription;
+  CardFooter = CardModule.CardFooter;
+  CardHeader = CardModule.CardHeader;
+  CardTitle = CardModule.CardTitle;
 } catch (e) {
   console.warn('Failed to load Card components, using fallbacks');
   Card = (props: any) => <FallbackComponent componentName="Card" {...props} />;
-  export const CardContent = (props: any) => <FallbackComponent componentName="CardContent" {...props} />;
-  export const CardDescription = (props: any) => <FallbackComponent componentName="CardDescription" {...props} />;
-  export const CardFooter = (props: any) => <FallbackComponent componentName="CardFooter" {...props} />;
-  export const CardHeader = (props: any) => <FallbackComponent componentName="CardHeader" {...props} />;
-  export const CardTitle = (props: any) => <FallbackComponent componentName="CardTitle" {...props} />;
+  CardContent = (props: any) => <FallbackComponent componentName="CardContent" {...props} />;
+  CardDescription = (props: any) => <FallbackComponent componentName="CardDescription" {...props} />;
+  CardFooter = (props: any) => <FallbackComponent componentName="CardFooter" {...props} />;
+  CardHeader = (props: any) => <FallbackComponent componentName="CardHeader" {...props} />;
+  CardTitle = (props: any) => <FallbackComponent componentName="CardTitle" {...props} />;
 }
 
 // Export all components
-export { Button, Input, Label, Textarea, Card, FallbackComponent }; 
+export { 
+  Button, 
+  Input, 
+  Label, 
+  Textarea, 
+  Card, 
+  CardContent, 
+  CardDescription, 
+  CardFooter, 
+  CardHeader, 
+  CardTitle,
+  FallbackComponent 
+}; 
