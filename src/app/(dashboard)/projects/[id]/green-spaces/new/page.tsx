@@ -6,11 +6,8 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Loader2 } from 'lucide-react';
 
-// Import UI components
-import { Label } from '@/components/ui/Label';
-import { Input } from '@/components/ui/Input';
-import { Button } from '@/components/ui/Button';
-import { Textarea } from '@/components/ui/Textarea';
+// Import UI components from the unified export
+import { Button, Input, Label, Textarea } from '@/components/ui';
 
 // Define interface for props
 interface NewGreenSpaceProps {

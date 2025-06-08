@@ -13,7 +13,7 @@ import {
   BarChart2,
 } from 'lucide-react';
 import Link from 'next/link';
-import { AreaChart } from '@/components/dashboard/charts/AreaChart';
+import { AreaChart } from '@/components/dashboard/charts';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
