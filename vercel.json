@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "buildCommand": "chmod +x vercel-install-command.sh && ./vercel-install-command.sh && npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
+} 
