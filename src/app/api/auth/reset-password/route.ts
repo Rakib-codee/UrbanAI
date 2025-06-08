@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
-import { hash } from 'bcryptjs';
+import * as bcryptjs from 'bcryptjs';
 
 export async function POST(req: Request) {
   try {
@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
     // Generate temporary password
     const tempPassword = Math.random().toString(36).slice(-8);
-    const hashedPassword = await hash(tempPassword, 10);
+    const hashedPassword = await bcryptjs.hash(tempPassword, 10);
 
     // Update user password
     await prisma.user.update({
